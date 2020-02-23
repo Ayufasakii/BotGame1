@@ -76,7 +76,7 @@ con.query(`SELECT * FROM lv WHERE name = '${message.author.username}'`,(err,rows
   }
 })
 client.on('message', message => { 
-  if (message.content === 'ทอย555') {
+  if (message.content === 'ทอย') {
     var sum = 0
   for(let i = 0;i < 2;i++){
     let output = Function.dice(1,8)
@@ -117,4 +117,4 @@ function generateXP(){
   return 0;
 }
 // Login the bot
-client.login(config.TOKEN);
+client.login('NjgxMDg0MDA2NjQ5MDM2ODEw.XlJTxQ._f57R5q-UdY-bpGhM2FDQ1IKs9s');
