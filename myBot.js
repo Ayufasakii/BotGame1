@@ -117,4 +117,4 @@ function generateXP(){
   return 0;
 }
 // Login the bot
-client.login('NjgxMDg0MDA2NjQ5MDM2ODEw.XlJw1Q.pkdABt2Up9CuzRiVfOBIqssU55M');
+client.login('NjgxMDg0MDA2NjQ5MDM2ODEw.XlJxzQ.EYpWBcOFSS6S4Z0S2LGs8VEMZsU');
