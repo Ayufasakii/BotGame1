@@ -33,68 +33,6 @@ client.on("ready", () => {
     }); 
 })
 
-  client.on("message", async message  => {
-      if(message.channel.id=='430359947012866048'){
-      const prefix = ";;";
-      const args = message.content.slice(prefix.length).trim().split(/ +/g);
-      const cmd = args.shift().toLowerCase();
-      if(!message.content.startsWith(prefix)&&message.author.id!='680112001783169047'){
-        message.reply('ห้องนี้ไว้ใส่เพลงนะไอเหี้ย')
-      }
-      }
-    })
-client.on("message", async message => {
-  const prefix = "**";
-  if (message.author.bot) return;
-  if (!message.guild) return;
-  if (!message.content.startsWith(prefix)) return;
-  const args = message.content.slice(prefix.length).trim().split(/ +/g);
-  const cmd = args.shift().toLowerCase();
-  if (cmd === "ping") {
-      // Send a message
-      const msg = await message.channel.sendMessage(`🏓 Pinging....`);
-
-      // Edit the message
-      msg.edit(`🏓 Pong!\nLatency is ${Math.floor(msg.createdTimestap - message.createdTimestap)}ms\nAPI Latency is ${Math.round(client.ping)}ms`);
-  }
-
-  if (cmd === "เรียก") {
-      if (message.deletable) message.delete();
-
-      if (args.length == 0) return message.reply(`Nothing to say?`).then(m => m.delete(5000));
-      if (args[0].toLowerCase() === "แก้ว") {
-        await message.channel.sendMessage('เข้าดิสได้ละไอเหี้ยแก้ว <@284689915743305730>');
-      }else if(args[0].toLowerCase() === "อัด") {
-        await message.channel.sendMessage('เข้าดิสได้แล้วครับนายท่าน <@302355445719367680>');
-      }else if(args[0].toLowerCase() === "เสด") {
-        await message.channel.sendMessage('เข้าดิสได้แล้วโอนี่จาง <@220526836440891392>');
-      }else if(args[0].toLowerCase() === "เป") {
-        await message.channel.sendMessage('ไอหน้าหีรีบเข้ามาดิ๊ <@264768635204141056>');
-      }
-      
-  }
-
-  if (cmd === "เช็ค") {
-    if (message.deletable) message.delete();
-
-    if (args.length == 0) return message.reply(`Nothing to say?`).then(m => m.delete(5000));
-    if (args[0].toLowerCase() === "ชื่อ") {
-      await message.channel.sendMessage(message.author.username);
-    }else if(args[0].toLowerCase() === "รูป") {
-      await message.channel.sendMessage(message.author.username);
-    }else if(args[0].toLowerCase() === "เสด") {
-      await message.channel.sendMessage('เข้าดิสได้แล้วโอนี่จาง <@220526836440891392>');
-    } 
-}
-if (cmd === "สร้าง") {
-  if (message.deletable) message.delete();
-
-  if (args.length == 0) return message.reply(`Nothing to say?`).then(m => m.delete(5000));
-    await message.channel.sendMessage(message.author.username);
-    Function.createChar(message.author.username,args[0].toLowerCase(),args[1].toLowerCase())
-}
-});
-
 client.on("message", async message => {
     console.log(`${message.author.username} said: ${message.content}`);
 });
