@@ -247,4 +247,4 @@ function getStatus(a){
   })
 }
 // Login the bot
-client.login('NjgxMDg0MDA2NjQ5MDM2ODEw.XlLyzg.vCDx7xO5jvGvjw144-xxDGVyFPo');
+client.login('NjgxMDg0MDA2NjQ5MDM2ODEw.XlLzsQ.YVckLlTAueO4xhz-KTwAe08AlhY');
