@@ -76,7 +76,7 @@ con.query(`SELECT * FROM lv WHERE name = '${message.author.username}'`,(err,rows
   }
 })
 client.on('message', message => { 
-  if (message.content === 'ทอย') {
+  if (message.content === 'ทอย555') {
     var sum = 0
   for(let i = 0;i < 2;i++){
     let output = Function.dice(1,8)
