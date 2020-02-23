@@ -1,0 +1,86 @@
+[debug] [2020-02-20T19:24:52.392Z] ----------------------------------------------------------------------
+[debug] [2020-02-20T19:24:52.394Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-02-20T19:24:52.394Z] CLI Version:   7.13.1
+[debug] [2020-02-20T19:24:52.394Z] Platform:      win32
+[debug] [2020-02-20T19:24:52.394Z] Node Version:  v12.12.0
+[debug] [2020-02-20T19:24:52.396Z] Time:          Fri Feb 21 2020 02:24:52 GMT+0700 (GMT+07:00)
+[debug] [2020-02-20T19:24:52.396Z] ----------------------------------------------------------------------
+[debug] [2020-02-20T19:24:52.396Z] 
+[debug] [2020-02-20T19:24:52.404Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-20T19:24:52.405Z] > authorizing via signed-in user
+[debug] [2020-02-20T19:24:52.405Z] [iam] checking project scdt-c8874 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasedatabase.instances.update","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2020-02-20T19:24:52.407Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/scdt-c8874:testIamPermissions  
+
+[debug] [2020-02-20T19:24:53.735Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-20T19:24:53.738Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/scdt-c8874  
+ 
+[debug] [2020-02-20T19:24:54.125Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'scdt-c8874'...
+[info] 
+[info] i  deploying database, storage, firestore, functions, hosting
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script.
+[info] i  database: checking rules syntax...
+[debug] [2020-02-20T19:24:57.833Z] >>> HTTP REQUEST PUT https://scdt-c8874.firebaseio.com/.settings/rules.json?dryRun=true  
+ {
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  "rules": {
+    ".read": false,
+    ".write": false
+  }
+}
+[debug] [2020-02-20T19:24:58.805Z] <<< HTTP RESPONSE 200
+[info] +  database: rules syntax for database scdt-c8874 is valid
+[debug] [2020-02-20T19:24:58.808Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/scdt-c8874  
+ 
+[debug] [2020-02-20T19:25:00.445Z] <<< HTTP RESPONSE 200
+[info] i  firebase.storage: checking storage.rules for compilation errors...
+[debug] [2020-02-20T19:25:00.449Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/scdt-c8874:test  
+
+[debug] [2020-02-20T19:25:01.919Z] <<< HTTP RESPONSE 200
+[info] +  firebase.storage: rules file storage.rules compiled successfully
+[info] i  firestore: reading indexes from firestore.indexes.json...
+[info] i  cloud.firestore: checking firestore.rules for compilation errors...
+[debug] [2020-02-20T19:25:01.924Z] >>> HTTP REQUEST POST https://firebaserules.googleapis.com/v1/projects/scdt-c8874:test  
+
+[debug] [2020-02-20T19:25:03.407Z] <<< HTTP RESPONSE 200
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully
+[debug] [2020-02-20T19:26:41.162Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase serve --only functions && node myBot.js",
+    "shell": "firebase functions:shell && node myBot.js",
+    "start": "npm run shell && node myBot.js",
+    "deploy": "firebase deploy && node myBot.js",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "dependencies": {
+    "firebase-admin": "^8.6.0",
+    "firebase-functions": "^3.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "firebase-functions-test": "^0.1.6"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2020-02-20T19:26:41.164Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/scdt-c8874/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2020-02-20T19:26:41.164Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/scdt-c8874/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2020-02-20T19:26:42.700Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-20T19:26:42.841Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2020-02-20T19:26:42.843Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/scdt-c8874/adminSdkConfig  
+ 
+[debug] [2020-02-20T19:26:43.225Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-20T19:26:43.227Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/scdt-c8874/versions  
+
